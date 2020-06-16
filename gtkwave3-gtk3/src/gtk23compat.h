@@ -16,7 +16,7 @@
 #if GTK_CHECK_VERSION(3,0,0)
 
 #ifndef MAC_INTEGRATION
-#define WAVE_ALLOW_GTK3_HEADER_BAR
+/* #define WAVE_ALLOW_GTK3_HEADER_BAR */ /* Commented for Windows style horizontal menubar instead of MAC style vertical menu in single button */
 #endif
 
 /* workaround for wave_vslider not rendering properly on startup */
