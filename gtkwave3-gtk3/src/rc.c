@@ -587,7 +587,7 @@ return(0);
 int f_use_fat_lines(char *str)
 {
 DEBUG(printf("f_use_fat_lines(\"%s\")\n",str));
-GLOBALS->cr_line_width = atoi_64(str) ? 2.0 : 1.0;
+GLOBALS->cr_line_width = atoi_64(str) ? 1.5 : 1.0;
 return(0);
 }
 
