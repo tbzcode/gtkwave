@@ -3,6 +3,9 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix and Windows which re
 
 ## Original gtkwave V/S this forked project
 
+**Common for gtk2 and gtk3** 
+* Added 14 new trace colors. Now total 21 colors are available to choose.
+
 **gtkwave3-gtk3**  
 * Removed MAC-style "single button vertical" memubar. GTKWave window will have Windows-style horizontal menu bar.
 * For fat lines display (rc variable: use_fat_lines), changed line width from 2.0 to 1.5
