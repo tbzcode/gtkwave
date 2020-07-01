@@ -588,8 +588,7 @@ int f_use_fat_lines(char *str)
 {
 double rcval;
 DEBUG(printf("f_use_fat_lines(\"%s\")\n",str));
-rcval = (double)(atoi_64(str));
-rcval = rcval/10.0;
+rcval = atof(str);
 GLOBALS->cr_line_width = (rcval<1.0) ? 1.0 : rcval;
 return(0);
 }
