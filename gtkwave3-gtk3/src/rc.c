@@ -592,7 +592,7 @@ rcval = atof(str);
 /* Line width */
 GLOBALS->cr_line_width = (rcval<1.0) ? 1.0 : rcval;
 /* Pixel co-ordinate offset based on pixel width */
-if((GLOBALS->cr_line_width)>1.0)
+if((GLOBALS->cr_line_width)>1.5)
 {
 	GLOBALS->cr_px_ofs = 0.0;
 }
