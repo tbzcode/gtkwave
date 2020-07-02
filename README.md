@@ -13,6 +13,7 @@ Example:
 &ensp;&ensp;```use_fat_lines 1.5```  
 &ensp;&ensp;```use_fat_lines 2.0```  
 &ensp;&ensp;```use_fat_lines off #For line width = Default (1.0)```
-
+* Fixed blurry fat line issue to make both thin and fat line sharp.
+ 
 ## Binary distribution
 Binary files for *Windows* are available in [**Releases**](https://github.com/tbzcode/gtkwave/releases) section.
