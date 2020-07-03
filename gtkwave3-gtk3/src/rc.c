@@ -590,6 +590,14 @@ double rcval;
 DEBUG(printf("f_use_fat_lines(\"%s\")\n",str));
 rcval = atof(str);
 GLOBALS->cr_line_width = (rcval<1.0) ? 1.0 : rcval;
+if((GLOBALS->cr_line_width)>1.5)
+{
+	GLOBALS->cairo_050_offset = 0.0;
+}
+else
+{
+	GLOBALS->cairo_050_offset = 0.5;
+}
 return(0);
 }
 
@@ -1152,15 +1160,21 @@ if(!(handle=fopen(rcname,"rb")))
 
         pw=getpwuid(geteuid());
         if(pw)
-              	{
+                {
                 home=pw->pw_dir;
-                if(home)
-                        {
-                        rcpath=(char *)alloca(strlen(home)+1+strlen(rcname)+1);
-                        strcpy(rcpath,home);
-                        strcat(rcpath,"/");
-                        strcat(rcpath,rcname);
-                        }
+                }
+
+        if(!home)
+                {
+                home = getenv("HOME");
+                }
+
+        if(home)
+                {
+                rcpath=(char *)alloca(strlen(home)+1+strlen(rcname)+1);
+                strcpy(rcpath,home);
+                strcat(rcpath,"/");
+                strcat(rcpath,rcname);
                 }
 
 	if( !rcpath || !(handle=fopen(rcpath,"rb")) )
